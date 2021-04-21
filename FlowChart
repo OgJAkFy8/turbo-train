@@ -1,22 +1,22 @@
 https://mermaid-js.github.io/mermaid-live-editor
 
 graph TD
-    A(Start Up) --> B
-    B[Set currentDay to today] --> C{if currentDay == now.day} --> |Yes| Z(Loop)
-    C --> |No|D[Read SD CSV]
+    A(Start Up) --> B[Set currentDay to now.day] 
+    B--> C{ if currentDay == now.day } --> | Yes | Z
+    C --> | No | D[Read SD CSV]
     D --> E{if CSV date == now.month}
-    E-->|No|Z(Loop)
-    E-->|Yes|F{if CSV date == now.day}
-    F-->|No|Z(Loop)
-    F-->|Yes|G{if date == }
-    G--> | Christmas|H[LED Green/Red Flash]
-    H-->M[Display On Date/Name/Age]
-    G-->|4th of July|I[LED Blue/Red Flash]
-    I-->M[Display On Date/Name/Age]
-    G-->|Other CSV|J[LED All Flash]
-    J-->M[Display On Date/Name/Age]
-    M-->W[Set currentDay to today] -->Z(Loop)
-Z(Loop)-->C
+    E--> | No | Z
+    E--> | Yes |F{if CSV date == now.day}
+    F--> | No |Z
+    F--> | Yes | G{if date == }
+    G--> | Christmas | H[LED Green/Red Flash]-->M
+    G--> | 4th of July | I[LED Blue/Red Flash]-->M
+    G--> | Other CSV | J[LED All Flash]-->M
+    M--> W[Set currentDay to now.day ] -->Z
+
+    M[Display Date/Name/Age]
+    Z(Loop)-->C
 
 
-https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBKFN0YXJ0IFVwKSAtLT4gQlxuICAgIEJbU2V0IGN1cnJlbnREYXkgdG8gdG9kYXldIC0tPiBDe2lmIGN1cnJlbnREYXkgPT0gbm93LmRheX0gLS0-IHxZZXN8IFooTG9vcClcbiAgICBDIC0tPiB8Tm98RFtSZWFkIFNEIENTVl1cbiAgICBEIC0tPiBFe2lmIENTViBkYXRlID09IG5vdy5tb250aH1cbiAgICBFLS0-fE5vfFooTG9vcClcbiAgICBFLS0-fFllc3xGe2lmIENTViBkYXRlID09IG5vdy5kYXl9XG4gICAgRi0tPnxOb3xaKExvb3ApXG4gICAgRi0tPnxZZXN8R3tpZiBkYXRlID09IH1cbiAgICBHLS0-IHwgQ2hyaXN0bWFzfEhbTEVEIEdyZWVuL1JlZCBGbGFzaF1cbiAgICBILS0-TVtEaXNwbGF5IE9uIERhdGUvTmFtZS9BZ2VdXG4gICAgRy0tPnw0dGggb2YgSnVseXxJW0xFRCBCbHVlL1JlZCBGbGFzaF1cbiAgICBJLS0-TVtEaXNwbGF5IE9uIERhdGUvTmFtZS9BZ2VdXG4gICAgRy0tPnxPdGhlciBDU1Z8SltMRUQgQWxsIEZsYXNoXVxuICAgIEotLT5NW0Rpc3BsYXkgT24gRGF0ZS9OYW1lL0FnZV1cbiAgICBNLS0-V1tTZXQgY3VycmVudERheSB0byB0b2RheV0gLS0-WihMb29wKVxuWihMb29wKS0tPkMiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ
+https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBKFN0YXJ0IFVwKSAtLT4gQltTZXQgY3VycmVudERheSB0byBub3cuZGF5XSBcbiAgICBCLS0-IEN7IGlmIGN1cnJlbnREYXkgPT0gbm93LmRheSB9IC0tPiB8IFllcyB8IFpcbiAgICBDIC0tPiB8IE5vIHwgRFtSZWFkIFNEIENTVl1cbiAgICBEIC0tPiBFe2lmIENTViBkYXRlID09IG5vdy5tb250aH1cbiAgICBFLS0-IHwgTm8gfCBaXG4gICAgRS0tPiB8IFllcyB8RntpZiBDU1YgZGF0ZSA9PSBub3cuZGF5fVxuICAgIEYtLT4gfCBObyB8WlxuICAgIEYtLT4gfCBZZXMgfCBHe2lmIGRhdGUgPT0gfVxuICAgIEctLT4gfCBDaHJpc3RtYXMgfCBIW0xFRCBHcmVlbi9SZWQgRmxhc2hdLS0-TVxuICAgIEctLT4gfCA0dGggb2YgSnVseSB8IElbTEVEIEJsdWUvUmVkIEZsYXNoXS0tPk1cbiAgICBHLS0-IHwgT3RoZXIgQ1NWIHwgSltMRUQgQWxsIEZsYXNoXS0tPk1cbiAgICBNLS0-IFdbU2V0IGN1cnJlbnREYXkgdG8gbm93LmRheSBdIC0tPlpcblxuICAgIE1bRGlzcGxheSBEYXRlL05hbWUvQWdlXVxuICAgIFooTG9vcCktLT5DIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0
+
